@@ -442,11 +442,12 @@ if (isset($_GET['view_patient'])) {
             position: sticky; top: 0; z-index: 100;
         }
          .brand-icon {
-            width: 30px;
-            height: 30px;
-            background: var(--primary);
+            width: 50px;
+            height: 50px;
+            background: transparent;
             border-radius: 50%;
          }
+         
         .page-content { padding: 25px; }
 
         /* CARDS */
@@ -469,6 +470,8 @@ if (isset($_GET['view_patient'])) {
         .form-control:focus, .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 0.2rem rgba(41,128,185,0.2); }
         .btn-primary { background: var(--primary); border-color: var(--primary); }
         .btn-primary:hover { background: #2471a3; border-color: #2471a3; }
+
+        
 
         /* MOBILE */
         @media (max-width: 768px) {
@@ -511,7 +514,7 @@ if (isset($_GET['view_patient'])) {
 <div class="sidebar" id="sidebar">
     <div class="sidebar-brand">
        <div classs="brand-icon">
-        <img src="./components/logo.png" alt=""class="brand-icon object-fit-cover">
+       <img class="w-25 h-25 object-fit-cover bg-transparent" src="https://elc-public-images.s3.ap-southeast-1.amazonaws.com/bcp-olp-logo-mini2.png">
        </div>
         <h5 class="mb-0 fw-bold">BCP CLINIC</h5>
         <small style="color:rgba(255,255,255,0.5)">Management System</small>
@@ -1613,7 +1616,7 @@ while ($row = $rooms->fetch_assoc()):
                 <div class="d-grid gap-2">
                     <a href="print_report.php?type=patients" target="_blank" class="btn btn-outline-primary"><i class="fas fa-users me-2"></i>Print Patient List</a>
                     <a href="appointmen.print.php?type=appointments" target="_blank" class="btn btn-outline-success"><i class="fas fa-calendar me-2"></i>Print Appointments Report</a>
-                    <a href="print_report.php?type=inventory" target="_blank" class="btn btn-outline-warning"><i class="fas fa-boxes me-2"></i>Print Inventory Report</a>
+                    <a href="inventory.print.php?type=inventory" target="_blank" class="btn btn-outline-warning"><i class="fas fa-boxes me-2"></i>Print Inventory Report</a>
                 </div>
             </div>
         </div>

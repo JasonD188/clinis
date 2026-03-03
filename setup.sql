@@ -90,7 +90,15 @@ CREATE TABLE IF NOT EXISTS users (
     role ENUM('admin', 'nurse', 'doctor') DEFAULT 'nurse',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+-- Inventory REPORTS --
+CREATE TABLE inventory_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    inventory_id INT NOT NULL,
+    action_type ENUM('ADD','REMOVE','RESTOCK') NOT NULL,
+    quantity INT NOT NULL,
+    action_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (inventory_id) REFERENCES inventory(id) ON DELETE CASCADE
+);
 -- Default admin user (password: admin123)
 INSERT INTO users (username, password, full_name, role) VALUES
 ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'System Administrator', 'admin')

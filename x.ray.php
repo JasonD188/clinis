@@ -146,7 +146,7 @@ body {
     </div>
 
     <div class="header">
-        <i class="fas fa-plus-square red-cross"></i>
+         <img src="./components/bestlink_college_of_the_philippines_logo.jpg" class="logo me-3">
         <h1>Medical Report</h1>
         <i class="fas fa-staff-snake medical-icon"></i>
     </div>
