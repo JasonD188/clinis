@@ -57,7 +57,6 @@ $itemData = $itemQuery->fetch_assoc();
 // =======================================
 $logQuery = $conn->query("SELECT action_date FROM inventory_logs WHERE inventory_id = $item_id ORDER BY action_date DESC LIMIT 1");
 $log = $logQuery->fetch_assoc();
-$action_date = $log['action_date'] ?? $itemData['created_at'];
 ?>
 
 <!DOCTYPE html>

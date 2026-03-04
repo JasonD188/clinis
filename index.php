@@ -382,7 +382,7 @@ if (isset($_GET['view_patient'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --sidebar-bg: #1a3a5c;
+            --sidebar-bg: #1b3c15;
             --sidebar-hover: #2980b9;
             --primary: #2980b9;
             --accent: #27ae60;
@@ -587,7 +587,7 @@ if (isset($_GET['view_patient'])) {
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><span class="dropdown-item-text text-muted small"><?= ucfirst($_SESSION['role']) ?></span></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="?page=settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                   
                     <li><a class="dropdown-item text-danger" href="logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                 </ul>
             </div>
@@ -876,7 +876,7 @@ if (isset($_GET['view_patient'])) {
     <div class="card-body py-2">
         <form method="GET" class="d-flex gap-2">
             <input type="hidden" name="page" value="patients">
-            <input type="text" name="search" class="form-control" placeholder="Search by name or student ID..." value="<?= htmlspecialchars($search) ?>">
+            <input type="text" name="search" class="form-control" placeholder="Search by name or Patient_ID" value="<?= htmlspecialchars($search) ?>">
             <button type="submit" class="btn btn-primary px-3"><i class="fas fa-search"></i></button>
             <?php if ($search): ?><a href="?page=patients" class="btn btn-outline-secondary"><i class="fas fa-times"></i></a><?php endif; ?>
         </form>

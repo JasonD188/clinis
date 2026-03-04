@@ -112,7 +112,7 @@ body {
     width: 100%;
     max-width: 500px;
     margin-top: 15px;
-    max-height: 300px;
+    max-height: 250px;
     object-fit: contain;
 }
 .footer {

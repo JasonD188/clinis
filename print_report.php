@@ -38,10 +38,7 @@ $data = $conn->query("SELECT * FROM patients ORDER BY full_name ASC");
     <td><?= $r['gender'] ?></td>
     <td><?= $r['blood_type'] ?></td>
     <td>
-        <a href="?id=<?= $r['id'] ?>" 
-           class="btn btn-success btn-sm">
-           <i class="fas fa-file-medical"></i> View
-        </a>
+        
 
         <a href="x.ray.php?id=<?= $r['id'] ?>" 
            class="btn btn-primary btn-sm">
